@@ -21,5 +21,5 @@ public class User {
         user.id = jsonObject.getLong("id");
         return user;
     }
-    
+
 }
