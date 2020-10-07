@@ -35,24 +35,6 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		});
 	}
 
-
-	// Inflate the menu; this adds items to the action bar if it is present.
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.menu_main, menu);
-		return true;
-	}
-
-	public boolean onOptionsItemSelected(MenuItem item)  {
-		if(item.getItemId() == R.id.compose){
-			//compose icon has been selected
-			Toast.makeText( this , "Compose!", Toast.LENGTH_SHORT).show();
-			//Navigate to the compose activity
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
 	// OAuth authenticated successfully, launch primary authenticated activity
 	// i.e Display application "homepage"
 	@Override

@@ -5,11 +5,13 @@ import android.text.format.DateUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel
 public class Tweet {
 
     public String body;
@@ -17,6 +19,11 @@ public class Tweet {
     public long id;
     public long userId;
     public User user;
+
+    //empty constructor needed by the Parceler library
+  public Tweet() {
+
+  }
 
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
